@@ -29,7 +29,7 @@ class Validateur
     /**
      * Get the ingredients
      *
-     * @input integer
+     * @param int $input
      *
      * This function calls a static fetching method against the Ingredient class
      * and returns everything matching this recipe ID
