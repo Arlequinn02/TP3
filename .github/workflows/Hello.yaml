@@ -7,10 +7,12 @@ jobs:
     name: PHPCS
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.1'
           tools: cs2pr, phpcs
       - name: Run phpcs
-        run: phpcs --standard=PSR1,PSR12
+        run: phpcs --standard=PSR1,PSR12 curl
