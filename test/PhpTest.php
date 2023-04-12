@@ -11,6 +11,8 @@
  * @link     http://example.com/recipes
  */
 
+namespace app;
+
 /**
  * Validateur class
  *
@@ -22,9 +24,6 @@
  * @license  http://opensource.org/licenses/gpl-license.php GNU Public License
  * @link     http://example.com/recipes/recipe
  */
-
-namespace app;
-
 class Validateur
 {
     /**
