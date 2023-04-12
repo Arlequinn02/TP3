@@ -27,12 +27,9 @@ namespace app;
 class Validateur
 {
     /**
-     * @var input
-     */
-    protected $input;
-
-    /**
      * Get the ingredients
+     *
+     * @input integer
      *
      * This function calls a static fetching method against the Ingredient class
      * and returns everything matching this recipe ID
