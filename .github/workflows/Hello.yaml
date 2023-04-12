@@ -17,4 +17,4 @@ jobs:
           php-version: '8.1'
           tools: cs2pr, phpcs
       - name: Run phpcs
-        run: phpcs --standard=PSR1,PSR12 app
+        run: phpcs --standard=PSR1,PSR12 C:\Users\toled\OneDrive\Bureau\Git2\tp3
