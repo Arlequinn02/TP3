@@ -12,6 +12,5 @@ jobs:
         with:
           php-version: '8.1'
           tools: cs2pr, phpcs
-      - uses: actions/checkout@v3
-      - name: PHPCS check
-        uses: chekalsky/phpcs-action@v1
+      - name: Run phpcs
+        run: phpcs --standard=PSR1,PSR12
