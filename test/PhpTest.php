@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Recipe class file
  *
@@ -11,37 +12,38 @@
  * @link     http://example.com/recipes
  */
 
-namespace app;
-
 /**
- * Validateur class
+ * Recipe class
  *
  * The class holding the root Recipe class definition
  *
- * @category Validateur
- * @package  Validateur
+ * @category Recipe
+ * @package  Recipe
  * @author   Lorna Jane Mitchell <lorna@ibuildings.com>
  * @license  http://opensource.org/licenses/gpl-license.php GNU Public License
  * @link     http://example.com/recipes/recipe
  */
-class Validateur
+class Recipe
 {
+
+    protected $id;
+
+    public $name;
+
+    public $prep_time;
+
     /**
      * Get the ingredients
-     *
-     * @param int $input Describe what this parameter is
      *
      * This function calls a static fetching method against the Ingredient class
      * and returns everything matching this recipe ID
      *
-     * @return boolean
+     * @return array An array of Ingredient objects
      */
-    public function check($input)
+    function getIngredients()
     {
-        if (strlen($input) < 2) {
-            return false;
-        } else {
-            return true;
-        }
+        $ingredients = Ingredient::fetchAllByRecipe($this->id);
+        return $ingredients;
     }
 }
+?>
